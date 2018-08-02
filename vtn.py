@@ -1,6 +1,6 @@
 from tkinter import *
 root = Tk()
-
+root.attributes('-fullscreen', True)
 root.title("Ventana Prueba")
 root.geometry('800x600')
 ### Etiqueta de titulo ###
