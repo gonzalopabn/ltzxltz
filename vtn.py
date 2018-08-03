@@ -55,11 +55,6 @@ def accion():
             print (minutes)
             print (seconds)
 
-
-
-
-
-
 btn_1= Button(root, text="Tocame", command=accion)
 btn_1.place(x=450,y=500)
 
