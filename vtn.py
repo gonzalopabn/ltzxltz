@@ -1,5 +1,17 @@
 from tkinter import *
 import  time
+import pymysql.cursors
+
+# Connect to the database.
+connection = pymysql.connect(host='aguaelrubi.no-ip.com',
+                             user='gg',
+                             password='1234',
+                             db='pipas',
+                             charset='utf8mb4',
+                             cursorclass=pymysql.cursors.DictCursor)
+
+print("connect successful!!")
+
 
 root = Tk()
 #root.attributes('-fullscreen', True)
@@ -54,6 +66,24 @@ def accion():
             minutes, seconds = diff // 60, diff % 60
             print (minutes)
             print (seconds)
+            try:
+
+                with connection.cursor() as cursor:
+
+                    # SQL
+                    sql = "INSERT usuario1(identrada,fecha, litros) VALUES (%s, %s, %s)"
+
+                    # Execute query.
+                    cursor.execute(sql, (int(4), time.ctime(), b))
+                    print ("enviado")
+
+
+            finally:
+                # Close connection.
+                connection.commit()
+                connection.close()
+
+
 
 btn_1= Button(root, text="Tocame", command=accion)
 btn_1.place(x=450,y=500)
