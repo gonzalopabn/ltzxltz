@@ -74,7 +74,7 @@ def accion():
                     sql = "INSERT usuario1(identrada,fecha, litros) VALUES (%s, %s, %s)"
 
                     # Execute query.
-                    cursor.execute(sql, (int(4), time.ctime(), b))
+                    cursor.execute(sql, (int(10), time.ctime(), b))
                     print ("enviado")
 
 
