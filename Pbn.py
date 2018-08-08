@@ -9,8 +9,13 @@ class Login():
         self.master.geometry("400x300")
         self.master.title("LOGIN")
 
-        self.label1=Label(self.master, text="Hola inicia sesion", fg="red").place(x=100,y=100)
-        self.btn1 = Button(self.master, text="Cambia de ventana", fg="red",command=self.gotoconteo).place(x=300,y=100)
+        self.label1=Label(self.master, text="Usuario", bg="red", fg="black", anchor=CENTER, height="1", width="9",
+                        font="Roboto 16").place(x=50,y=50)
+        self.labelw = Label(self.master, text="Contrasena", bg="red", fg="black", anchor=CENTER, height="1", width="9",
+                            font="Roboto 16").place(x=50, y=100)
+        self.ent11 = Entry(self.master, width="9", font="Roboto 16").place(x=200, y=50)
+        self.ent12=Entry(self.master,  width="9", font="Roboto 16").place(x=200,y=100)
+        self.btn1 = Button(self.master, text="Cambia de ventana", fg="red",command=self.gotoconteo).place(x=300,y=300)
 
     ## Envia a la segunda ventana
     def gotoconteo(self):
