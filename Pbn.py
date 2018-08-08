@@ -15,7 +15,7 @@ class Login():
                             font="Roboto 16").place(x=50, y=100)
         self.ent11 = Entry(self.master, width="9", font="Roboto 16").place(x=200, y=50)
         self.ent12=Entry(self.master,  width="9", font="Roboto 16").place(x=200,y=100)
-        self.btn1 = Button(self.master, text="Cambia de ventana", fg="red",command=self.gotoconteo).place(x=300,y=300)
+        self.btn1 = Button(self.master, text="Cambia de ventana", fg="red",command=self.gotoconteo).place(x=100,y=200)
 
     ## Envia a la segunda ventana
     def gotoconteo(self):
